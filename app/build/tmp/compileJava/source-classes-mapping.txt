@@ -1,0 +1,8 @@
+pl/edu/pjwstk/jaz/App.java
+ pl.edu.pjwstk.jaz.App
+pl/edu/pjwstk/jaz/Test1Entity.java
+ pl.edu.pjwstk.jaz.Test1Entity
+pl/edu/pjwstk/jaz/ReadinessController.java
+ pl.edu.pjwstk.jaz.ReadinessController
+pl/edu/pjwstk/jaz/average/AverageController.java
+ pl.edu.pjwstk.jaz.average.AverageController

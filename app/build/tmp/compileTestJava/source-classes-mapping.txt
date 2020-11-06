@@ -1,0 +1,12 @@
+pl/edu/pjwstk/jaz/TestConfig.java
+ pl.edu.pjwstk.jaz.TestConfig
+pl/edu/pjwstk/jaz/TestContextHolder.java
+ pl.edu.pjwstk.jaz.TestContextHolder
+pl/edu/pjwstk/jaz/ExampleTest.java
+ pl.edu.pjwstk.jaz.ExampleTest
+pl/edu/pjwstk/jaz/IntegrationTest.java
+ pl.edu.pjwstk.jaz.IntegrationTest
+pl/edu/pjwstk/jaz/RestAssurePortListener.java
+ pl.edu.pjwstk.jaz.RestAssurePortListener
+pl/edu/pjwstk/jaz/average/AverageControllerIT.java
+ pl.edu.pjwstk.jaz.average.AverageControllerIT
