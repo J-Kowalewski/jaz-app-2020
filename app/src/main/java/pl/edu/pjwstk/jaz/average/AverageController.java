@@ -15,7 +15,7 @@ public class AverageController {
         if(numbers==null || numbers.isEmpty()){
             return "nie podano parametrow";
         }
-        else{
+        else{   
             String[] parts = numbers.split(",");
             double suma=0;
             for (String part : parts) {
