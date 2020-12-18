@@ -1,17 +1,18 @@
 package pl.edu.pjwstk.jaz;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class RegisteredUsers {
-    private final Map<String, User> registeredUsers;
+    private final Map<String, User> registeredUsers = new HashMap<>();
 
     public RegisteredUsers(){
-        registeredUsers = new HashMap<>();
-
         User admin = new User("admin","admin");
-        admin.addAuthority("admin");
         admin.addAuthority("user");
+        admin.addAuthority("admin");
         registeredUsers.put("admin",admin);
     }
     public void add(String username, String password){registeredUsers.put(username, new User(username, password));}

@@ -1,5 +1,6 @@
 package pl.edu.pjwstk.jaz;
 
+import io.restassured.http.ContentType;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,15 +13,11 @@ import static io.restassured.RestAssured.given;
 public class LoginTest {
 
     @BeforeClass
-    public static void beforeClass() throws  Exception{
-        given()
-                .body(new RegisterRequest("admin","admin"))
-                .when()
-                .post("/api/register")
-                .thenReturn();
+    public static void beforeClass() throws Exception{
         given()
                 .body(new RegisterRequest("user","user"))
                 .when()
+                .contentType(ContentType.JSON)
                 .post("/api/register")
                 .thenReturn();
     }
@@ -30,6 +27,7 @@ public class LoginTest {
         given()
                 .when()
                 .body(new LoginRequest("user","user"))
+                .contentType(ContentType.JSON)
                 .post("/api/login")
                 .then()
                 .statusCode(200);
@@ -37,20 +35,65 @@ public class LoginTest {
 
     @Test
     public void should_not_login_unregistered_user(){
-        given()
+        var response = given()
                 .when()
                 .body(new LoginRequest("jkowalewski","jkowalewski"))
+                .contentType(ContentType.JSON)
                 .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.cookies())
                 .then()
-                .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+                .statusCode(HttpStatus.UNAUTHORIZED.value());
     }
     @Test
     public void should_login_admin(){
         given()
                 .when()
                 .body(new LoginRequest("admin","admin"))
+                .contentType(ContentType.JSON)
                 .post("/api/login")
                 .then()
                 .statusCode(200);
     }
+    @Test
+    public void filterTest1(){
+        var response = given()
+                .when()
+                .body(new LoginRequest("user","user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/edit")
+                .then()
+                .statusCode(HttpStatus.FORBIDDEN.value());
+    }
+    //please help vvvvvvv
+    @Test
+    public void filterTest2(){
+        var response = given()
+                .when()
+                .contentType(ContentType.JSON)
+                .body(new LoginRequest("admin","admin"))
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/edit")
+                .then()
+                .statusCode(200);
+    }
+    @Test
+    public void registerTest(){
+        given()
+                .contentType(ContentType.JSON)
+                .body(new RegisterRequest("login","password"))
+                .when()
+                .post("/api/register")
+                .then()
+                .statusCode(200);
+    }
 }
+

@@ -1,19 +1,18 @@
 package pl.edu.pjwstk.jaz;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class User {
     private String username;
     private String password;
-    Set<String> authorities;
+    Set<String> authorities = new HashSet<>();
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public <T> User(Set<T> emptySet) {
-    }
 
     public String getUsername() {
         return username;

@@ -24,4 +24,6 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.11.1'
     testImplementation 'org.testcontainers:postgresql:1.14.3'
     testImplementation 'io.rest-assured:rest-assured'
+
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-jaxb-annotations', version: '2.9.3'
 }

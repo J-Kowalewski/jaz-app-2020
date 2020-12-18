@@ -1,8 +1,44 @@
-pl/edu/pjwstk/jaz/App.java
- pl.edu.pjwstk.jaz.App
-pl/edu/pjwstk/jaz/Test1Entity.java
- pl.edu.pjwstk.jaz.Test1Entity
+pl/edu/pjwstk/jaz/UserService.java
+ pl.edu.pjwstk.jaz.UserService
+pl/edu/pjwstk/jaz/endpoints/Explore.java
+ pl.edu.pjwstk.jaz.endpoints.Explore
+pl/edu/pjwstk/jaz/UserSession.java
+ pl.edu.pjwstk.jaz.UserSession
+pl/edu/pjwstk/jaz/AuthenticationService.java
+ pl.edu.pjwstk.jaz.AuthenticationService
+pl/edu/pjwstk/jaz/ExampleFilter.java
+ pl.edu.pjwstk.jaz.ExampleFilter
+pl/edu/pjwstk/jaz/RegisterController.java
+ pl.edu.pjwstk.jaz.RegisterController
 pl/edu/pjwstk/jaz/ReadinessController.java
  pl.edu.pjwstk.jaz.ReadinessController
 pl/edu/pjwstk/jaz/average/AverageController.java
  pl.edu.pjwstk.jaz.average.AverageController
+pl/edu/pjwstk/jaz/AppAuthentication.java
+ pl.edu.pjwstk.jaz.AppAuthentication
+pl/edu/pjwstk/jaz/LoginController.java
+ pl.edu.pjwstk.jaz.LoginController
+pl/edu/pjwstk/jaz/AppWebSecurityConfigurerAdapter.java
+ pl.edu.pjwstk.jaz.AppWebSecurityConfigurerAdapter
+pl/edu/pjwstk/jaz/AppWebSecurityConfig.java
+ pl.edu.pjwstk.jaz.AppWebSecurityConfig
+pl/edu/pjwstk/jaz/LoginRequest.java
+ pl.edu.pjwstk.jaz.LoginRequest
+pl/edu/pjwstk/jaz/RegisteredUsers.java
+ pl.edu.pjwstk.jaz.RegisteredUsers
+pl/edu/pjwstk/jaz/endpoints/Edit.java
+ pl.edu.pjwstk.jaz.endpoints.Edit
+pl/edu/pjwstk/jaz/User.java
+ pl.edu.pjwstk.jaz.User
+pl/edu/pjwstk/jaz/UserEntity.java
+ pl.edu.pjwstk.jaz.UserEntity
+pl/edu/pjwstk/jaz/UserRepository.java
+ pl.edu.pjwstk.jaz.UserRepository
+pl/edu/pjwstk/jaz/App.java
+ pl.edu.pjwstk.jaz.App
+pl/edu/pjwstk/jaz/UnauthorizedException.java
+ pl.edu.pjwstk.jaz.UnauthorizedException
+pl/edu/pjwstk/jaz/Test1Entity.java
+ pl.edu.pjwstk.jaz.Test1Entity
+pl/edu/pjwstk/jaz/RegisterRequest.java
+ pl.edu.pjwstk.jaz.RegisterRequest

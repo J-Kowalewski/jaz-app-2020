@@ -23,12 +23,12 @@ public class AppAuthentication extends AbstractAuthenticationToken {
 
     @Override
     public Object getCredentials() {
-        return null;
+        return authenticatedUser.getPassword();
     }
 
     @Override
     public Object getPrincipal() {
-        return null;
+        return authenticatedUser;
     }
 
     @Override
