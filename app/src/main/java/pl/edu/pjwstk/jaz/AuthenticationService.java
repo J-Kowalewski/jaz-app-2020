@@ -10,23 +10,23 @@ import java.util.Collections;
 @Component //@Service
 public class AuthenticationService {
     final UserSession userSession;
-    final RegisteredUsers registeredUsers;
     final RegisterController registerController;
+    final UserService userService;
 
-    public AuthenticationService(UserSession userSession, RegisteredUsers registeredUsers,
+    public AuthenticationService(UserSession userSession,  UserService userService,
                                  RegisterController registerController) {
-
+        this.userService = userService;
         this.userSession = userSession;
-        this.registeredUsers = registeredUsers;
         this.registerController = registerController;
     }
 
     public boolean login(String username, String password){
-        if(!username.isEmpty() && !password.isEmpty() && registerController.registeredUsers.isRegisteredUser(username)
-                &&registerController.registeredUsers.isPasswordCorrect(username,password)){
-
+       // if(!username.isEmpty() && !password.isEmpty() && registerController.registeredUsers.isRegisteredUser(username)
+       //         &&registerController.registeredUsers.isPasswordCorrect(username,password)){
+        UserEntity userEntity = userService.findByUsername(username);
+        if(userService.passwordCheck(password, userEntity.getPassword())){
             userSession.logIn();
-            SecurityContextHolder.getContext().setAuthentication(new AppAuthentication(registerController.registeredUsers.getUser(username)));
+            SecurityContextHolder.getContext().setAuthentication(new AppAuthentication(userEntity));
             return true;
         }
         return false;

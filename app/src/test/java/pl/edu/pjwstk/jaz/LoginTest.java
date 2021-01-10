@@ -20,6 +20,12 @@ public class LoginTest {
                 .contentType(ContentType.JSON)
                 .post("/api/register")
                 .thenReturn();
+        given()
+                .body(new RegisterRequest("admin","admin"))
+                .when()
+                .contentType(ContentType.JSON)
+                .post("/api/register")
+                .thenReturn();
     }
 
     @Test
