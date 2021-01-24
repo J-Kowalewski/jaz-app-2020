@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz;
+package pl.edu.pjwstk.jaz.register;
 
 public class RegisterRequest {
 

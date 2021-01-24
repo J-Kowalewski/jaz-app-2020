@@ -1,11 +1,9 @@
 package pl.edu.pjwstk.jaz;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
-import java.util.Collections;
+import pl.edu.pjwstk.jaz.register.RegisterController;
+import pl.edu.pjwstk.jaz.user.UserService;
 
 @Component //@Service
 public class AuthenticationService {
@@ -21,9 +19,7 @@ public class AuthenticationService {
     }
 
     public boolean login(String username, String password){
-       // if(!username.isEmpty() && !password.isEmpty() && registerController.registeredUsers.isRegisteredUser(username)
-       //         &&registerController.registeredUsers.isPasswordCorrect(username,password)){
-        UserEntity userEntity = userService.findByUsername(username);
+        var userEntity = userService.findByUsername(username);
         if(userService.passwordCheck(password, userEntity.getPassword())){
             userSession.logIn();
             SecurityContextHolder.getContext().setAuthentication(new AppAuthentication(userEntity));

@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
+import pl.edu.pjwstk.jaz.login.LoginRequest;
+import pl.edu.pjwstk.jaz.register.RegisterRequest;
 
 import static io.restassured.RestAssured.given;
 
@@ -36,7 +38,7 @@ public class LoginTest {
                 .contentType(ContentType.JSON)
                 .post("/api/login")
                 .then()
-                .statusCode(200);
+                .statusCode(HttpStatus.ACCEPTED.value());
     }
 
     @Test
@@ -60,7 +62,7 @@ public class LoginTest {
                 .contentType(ContentType.JSON)
                 .post("/api/login")
                 .then()
-                .statusCode(200);
+                .statusCode(HttpStatus.ACCEPTED.value());
     }
     @Test
     public void filterTest1(){
@@ -89,7 +91,7 @@ public class LoginTest {
                 .cookies(response.getCookies())
                 .get("/api/edit")
                 .then()
-                .statusCode(200);
+                .statusCode(HttpStatus.OK.value());
     }
     @Test
     public void registerTest(){

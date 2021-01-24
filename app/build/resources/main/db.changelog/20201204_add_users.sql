@@ -9,8 +9,8 @@ CREATE TABLE users(
 );
 
 CREATE TABLE user_role(
-    user_id BIGINT NOT NULL,
+    user_entity_id BIGINT NOT NULL,
     role VARCHAR(100) NOT NULL,
 
-    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id)
-)
+    CONSTRAINT fk_user_id FOREIGN KEY (user_entity_id) REFERENCES users(id)
+);

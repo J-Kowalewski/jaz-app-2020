@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz;
+package pl.edu.pjwstk.jaz.login;
 
 public class LoginRequest {
     private final String username;

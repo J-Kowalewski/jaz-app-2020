@@ -16,27 +16,37 @@ pl/edu/pjwstk/jaz/average/AverageController.java
  pl.edu.pjwstk.jaz.average.AverageController
 pl/edu/pjwstk/jaz/User.java
  pl.edu.pjwstk.jaz.User
-pl/edu/pjwstk/jaz/RegisterRequest.java
- pl.edu.pjwstk.jaz.RegisterRequest
+pl/edu/pjwstk/jaz/RegisteredUsers.java
+ pl.edu.pjwstk.jaz.RegisteredUsers
 pl/edu/pjwstk/jaz/AppWebSecurityConfigurerAdapter.java
  pl.edu.pjwstk.jaz.AppWebSecurityConfigurerAdapter
 pl/edu/pjwstk/jaz/AppWebSecurityConfig.java
  pl.edu.pjwstk.jaz.AppWebSecurityConfig
-pl/edu/pjwstk/jaz/LoginRequest.java
- pl.edu.pjwstk.jaz.LoginRequest
-pl/edu/pjwstk/jaz/endpoints/Edit.java
- pl.edu.pjwstk.jaz.endpoints.Edit
-pl/edu/pjwstk/jaz/RegisteredUsers.java
- pl.edu.pjwstk.jaz.RegisteredUsers
-pl/edu/pjwstk/jaz/AppAuthentication.java
- pl.edu.pjwstk.jaz.AppAuthentication
-pl/edu/pjwstk/jaz/LoginController.java
- pl.edu.pjwstk.jaz.LoginController
-pl/edu/pjwstk/jaz/UserService.java
- pl.edu.pjwstk.jaz.UserService
-pl/edu/pjwstk/jaz/UserEntity.java
- pl.edu.pjwstk.jaz.UserEntity
 pl/edu/pjwstk/jaz/AuthenticationService.java
  pl.edu.pjwstk.jaz.AuthenticationService
-pl/edu/pjwstk/jaz/RegisterController.java
- pl.edu.pjwstk.jaz.RegisterController
+pl/edu/pjwstk/jaz/category/CategoryService.java
+ pl.edu.pjwstk.jaz.category.CategoryService
+pl/edu/pjwstk/jaz/register/RegisterRequest.java
+ pl.edu.pjwstk.jaz.register.RegisterRequest
+pl/edu/pjwstk/jaz/AppAuthentication.java
+ pl.edu.pjwstk.jaz.AppAuthentication
+pl/edu/pjwstk/jaz/category/EditCategoryRequest.java
+ pl.edu.pjwstk.jaz.category.EditCategoryRequest
+pl/edu/pjwstk/jaz/register/RegisterController.java
+ pl.edu.pjwstk.jaz.register.RegisterController
+pl/edu/pjwstk/jaz/endpoints/Edit.java
+ pl.edu.pjwstk.jaz.endpoints.Edit
+pl/edu/pjwstk/jaz/user/UserService.java
+ pl.edu.pjwstk.jaz.user.UserService
+pl/edu/pjwstk/jaz/login/LoginRequest.java
+ pl.edu.pjwstk.jaz.login.LoginRequest
+pl/edu/pjwstk/jaz/user/UserEntity.java
+ pl.edu.pjwstk.jaz.user.UserEntity
+pl/edu/pjwstk/jaz/endpoints/Add.java
+ pl.edu.pjwstk.jaz.endpoints.Add
+pl/edu/pjwstk/jaz/category/AddCategoryRequest.java
+ pl.edu.pjwstk.jaz.category.AddCategoryRequest
+pl/edu/pjwstk/jaz/login/LoginController.java
+ pl.edu.pjwstk.jaz.login.LoginController
+pl/edu/pjwstk/jaz/category/CategoryEntity.java
+ pl.edu.pjwstk.jaz.category.CategoryEntity

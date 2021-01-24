@@ -1,4 +1,4 @@
-package pl.edu.pjwstk.jaz;
+package pl.edu.pjwstk.jaz.user;
 
 import liquibase.pro.packaged.S;
 
