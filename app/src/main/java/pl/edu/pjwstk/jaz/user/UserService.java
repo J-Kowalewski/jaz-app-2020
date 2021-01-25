@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import pl.edu.pjwstk.jaz.user.UserEntity;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.Set;
@@ -30,10 +31,16 @@ public class UserService {
         entityManager.persist(userEntity);
     }
     public UserEntity findByUsername(String username){
+        try{
             return entityManager.createQuery("SELECT u FROM UserEntity u WHERE u.username =: username", UserEntity.class)
                     .setParameter("username", username)
                     .getSingleResult();
+        }
+        catch (NoResultException e){
+            return null;
+        }
     }
+
     public boolean passwordCheck(String password, String encodePass){
         return passwordEncoder.matches(password,encodePass);
     }

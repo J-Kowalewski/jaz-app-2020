@@ -26,4 +26,12 @@ public class CategoryService {
                 .setParameter("name", name)
                 .getSingleResult();
     }
+    public CategoryEntity findById(Long id){
+        return entityManager.createQuery("SELECT c FROM CategoryEntity c WHERE c.id =: id", CategoryEntity.class)
+                .setParameter("id", id)
+                .getSingleResult();
+    }
+    public CategoryEntity update(CategoryEntity categoryEntity){
+        return entityManager.merge(categoryEntity);
+    }
 }

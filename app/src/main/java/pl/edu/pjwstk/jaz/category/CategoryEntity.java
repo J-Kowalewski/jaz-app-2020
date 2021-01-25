@@ -11,6 +11,14 @@ public class CategoryEntity {
     @Column(unique = true)
     private String name;
 
+    public CategoryEntity() {
+    }
+
+    public CategoryEntity(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }

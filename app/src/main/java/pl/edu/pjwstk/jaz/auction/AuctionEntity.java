@@ -1,5 +1,9 @@
 package pl.edu.pjwstk.jaz.auction;
 
+import pl.edu.pjwstk.jaz.User;
+import pl.edu.pjwstk.jaz.category.CategoryEntity;
+import pl.edu.pjwstk.jaz.user.UserEntity;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +16,30 @@ public class AuctionEntity {
     private String title;
     private String description;
     private Double price;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    private CategoryEntity category;
+
+    @OneToOne
+    @JoinColumn(name = "creator_id", referencedColumnName = "id")
+    private UserEntity author;
+
+    public CategoryEntity getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryEntity category) {
+        this.category = category;
+    }
+
+    public UserEntity getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(UserEntity author) {
+        this.author = author;
+    }
 
     public Long getId() {
         return id;
