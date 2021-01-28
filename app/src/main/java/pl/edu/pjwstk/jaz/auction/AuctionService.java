@@ -9,6 +9,7 @@ import pl.edu.pjwstk.jaz.parameter.ParameterEntity;
 import pl.edu.pjwstk.jaz.user.UserEntity;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -23,7 +24,7 @@ public class AuctionService {
         this.entityManager = entityManager;
     }
 
-    public void saveAuction(String title, String description, Double price, UserEntity author,
+    public AuctionEntity saveAuction(String title, String description, Double price, UserEntity author,
                             CategoryEntity category, String parameterKey, String parameterValue) {
         AuctionEntity auctionEntity = new AuctionEntity(title, description, price, category, author);
         entityManager.persist(auctionEntity);
@@ -33,22 +34,23 @@ public class AuctionService {
 
         AuctionParameterEntity auctionParameterEntity = new AuctionParameterEntity(auctionEntity, parameterEntity, parameterValue);
         entityManager.persist(auctionParameterEntity);
-    }
 
-    public AuctionEntity findByName(String title) {
-        return entityManager.createQuery("SELECT a FROM AuctionEntity a WHERE a.title =: title", AuctionEntity.class)
-                .setParameter("title", title)
-                .getSingleResult();
+        return auctionEntity;
     }
 
     public AuctionEntity findById(Long id) {
-        return entityManager.createQuery("SELECT a FROM AuctionEntity a WHERE a.id =: id", AuctionEntity.class)
-                .setParameter("id", id)
-                .getSingleResult();
+        try{
+            return entityManager.createQuery("SELECT a FROM AuctionEntity a WHERE a.id =: id", AuctionEntity.class)
+                    .setParameter("id", id)
+                    .getSingleResult();
+        }
+        catch(NoResultException e){
+            return null;
+        }
     }
 
     public List<Object[]> findAllAuctions() {
-        return entityManager.createQuery("SELECT a.id,a.title,a.description,a.price,a.category.name,a.author.username FROM AuctionEntity a", Object[].class)
+        return entityManager.createQuery("SELECT a.id,a.title,a.description,a.price,a.category.name,a.author.username, p.link FROM AuctionEntity a, PhotoEntity p WHERE p.auction.id=a.id", Object[].class)
                 .getResultList();
     }
 

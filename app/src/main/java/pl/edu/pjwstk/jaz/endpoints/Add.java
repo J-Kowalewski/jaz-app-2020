@@ -1,5 +1,6 @@
 package pl.edu.pjwstk.jaz.endpoints;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -47,12 +48,19 @@ public class Add {
     }
     @PreAuthorize("hasAnyAuthority('user')")
     @PostMapping("/add/auction")
-    public void addAuction(@RequestBody AddAuctionRequest request){
+    public ResponseEntity<Void> addAuction(@RequestBody AddAuctionRequest request){
         UserEntity author = userService.getLoggedUser();
         CategoryEntity categoryEntity = categoryService.findByName(request.getCategory());
-
-        auctionService.saveAuction(request.getTitle(),request.getDescription(), request.getPrice(), author,
-                categoryEntity, request.getParameterKey(), request.getParameterValue());
+        if(categoryEntity==null){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        else{
+            var auction = auctionService.saveAuction(request.getTitle(),request.getDescription(), request.getPrice(), author,
+                    categoryEntity, request.getParameterKey(), request.getParameterValue());
+            HttpHeaders responseHeaders = new HttpHeaders();
+            responseHeaders.add("id",auction.getId().toString());
+            return new ResponseEntity<>(responseHeaders,HttpStatus.CREATED);
+        }
     }
     @PreAuthorize("hasAnyAuthority('user')")
     @PostMapping("/add/photo")

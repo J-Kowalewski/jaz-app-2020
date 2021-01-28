@@ -36,8 +36,8 @@ pl/edu/pjwstk/jaz/category/CategoryEntity.java
  pl.edu.pjwstk.jaz.category.CategoryEntity
 pl/edu/pjwstk/jaz/Test1Entity.java
  pl.edu.pjwstk.jaz.Test1Entity
-pl/edu/pjwstk/jaz/auction/AuctionService.java
- pl.edu.pjwstk.jaz.auction.AuctionService
+pl/edu/pjwstk/jaz/category/CategoryService.java
+ pl.edu.pjwstk.jaz.category.CategoryService
 pl/edu/pjwstk/jaz/photo/PhotoEntity.java
  pl.edu.pjwstk.jaz.photo.PhotoEntity
 pl/edu/pjwstk/jaz/auction/EditAuctionRequest.java
@@ -64,9 +64,9 @@ pl/edu/pjwstk/jaz/AuthenticationService.java
  pl.edu.pjwstk.jaz.AuthenticationService
 pl/edu/pjwstk/jaz/endpoints/Edit.java
  pl.edu.pjwstk.jaz.endpoints.Edit
-pl/edu/pjwstk/jaz/endpoints/Explore.java
- pl.edu.pjwstk.jaz.endpoints.Explore
+pl/edu/pjwstk/jaz/auction/AuctionService.java
+ pl.edu.pjwstk.jaz.auction.AuctionService
 pl/edu/pjwstk/jaz/endpoints/Add.java
  pl.edu.pjwstk.jaz.endpoints.Add
-pl/edu/pjwstk/jaz/category/CategoryService.java
- pl.edu.pjwstk.jaz.category.CategoryService
+pl/edu/pjwstk/jaz/endpoints/Explore.java
+ pl.edu.pjwstk.jaz.endpoints.Explore

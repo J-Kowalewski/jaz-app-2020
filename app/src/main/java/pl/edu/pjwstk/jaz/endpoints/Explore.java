@@ -1,5 +1,7 @@
 package pl.edu.pjwstk.jaz.endpoints;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,18 +31,20 @@ public class Explore {
         this.userService = userService;
     }
 
-
     @GetMapping("/explore")
     public List<Object[]> explore(){
         return auctionService.findAllAuctions();
     }
 
     @GetMapping("/explore/auction/{id}")
-    public GetAuctionRequest exploreAuction(@PathVariable Long id){
+    public ResponseEntity<GetAuctionRequest> exploreAuction(@PathVariable Long id){
         var auction = auctionService.findById(id);
+        if(auction==null){
+            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
+        }
         var photo = photoService.getPhotos(id);
         var parameter = auctionService.findParameterById(id);
-        return new GetAuctionRequest(
+        var getAuctionRequest = new GetAuctionRequest(
                 auction.getId(),
                 auction.getTitle(),
                 auction.getDescription(),
@@ -50,16 +54,25 @@ public class Explore {
                 photo,
                 parameter.getParameter().getKey(),
                 parameter.getValue());
+        return new ResponseEntity<>(getAuctionRequest,HttpStatus.OK);
     }
 
     @GetMapping("/explore/category/{id}")
-    public CategoryEntity exploreCategory(@PathVariable Long id){
-        return categoryService.findById(id);
+    public ResponseEntity<CategoryEntity> exploreCategory(@PathVariable Long id){
+        var category = categoryService.findById(id);
+        if (category == null) {
+            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
+        }
+        else return new ResponseEntity<>(category,HttpStatus.OK);
     }
 
     @GetMapping("/explore/photo/{id}")
-    public List<String> explorePhoto(@PathVariable Long id){
-        return photoService.getPhotos(id);
+    public ResponseEntity<List<String>> explorePhoto(@PathVariable Long id){
+        var photos = photoService.getPhotos(id);
+        if(photos.isEmpty()){
+            return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
+        }
+        else return new ResponseEntity<>(photos,HttpStatus.OK);
     }
     @GetMapping("/explore/user")
     public UserEntity exploreUser() {
