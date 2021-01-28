@@ -1,21 +1,37 @@
 package pl.edu.pjwstk.jaz.auction;
 
-import pl.edu.pjwstk.jaz.category.CategoryEntity;
-import pl.edu.pjwstk.jaz.user.UserEntity;
-
 public class AddAuctionRequest {
     private String title;
     private String description;
     private Double price;
     private String categoryName;
-    private String author;
+    private String parameterKey;
+    private String parameterValue;
 
-    public AddAuctionRequest(String title, String description, Double price, String category, String author) {
+    public AddAuctionRequest(String title, String description, Double price, String category,
+                             String parameterKey, String parameter_Value) {
         this.title = title;
         this.description = description;
         this.price = price;
         this.categoryName = category;
-        this.author = author;
+        this.parameterKey = parameterKey;
+        this.parameterValue = parameter_Value;
+    }
+
+    public String getParameterKey() {
+        return parameterKey;
+    }
+
+    public void setParameterKey(String parameterKey) {
+        this.parameterKey = parameterKey;
+    }
+
+    public String getParameterValue() {
+        return parameterValue;
+    }
+
+    public void setParameterValue(String parameterValue) {
+        this.parameterValue = parameterValue;
     }
 
     public String getTitle() {
@@ -50,11 +66,4 @@ public class AddAuctionRequest {
         this.categoryName = category;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
 }

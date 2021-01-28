@@ -1,5 +1,6 @@
 package pl.edu.pjwstk.jaz.user;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -43,5 +44,8 @@ public class UserService {
 
     public boolean passwordCheck(String password, String encodePass){
         return passwordEncoder.matches(password,encodePass);
+    }
+    public UserEntity getLoggedUser(){
+        return (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }

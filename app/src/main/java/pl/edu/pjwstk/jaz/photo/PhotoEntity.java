@@ -10,10 +10,20 @@ public class PhotoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String link;
+
     @ManyToOne
     @JoinColumn(name = "auction_id", referencedColumnName = "id")
     private AuctionEntity auction;
+
+    public PhotoEntity(String link, AuctionEntity auction) {
+        this.link = link;
+        this.auction = auction;
+    }
+
+    public PhotoEntity() {
+    }
 
     public Long getId() {
         return id;

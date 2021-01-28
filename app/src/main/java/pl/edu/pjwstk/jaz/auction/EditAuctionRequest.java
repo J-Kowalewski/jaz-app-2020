@@ -8,13 +8,34 @@ public class EditAuctionRequest {
     private String description;
     private Double price;
     private String category;
+    private String parameterKey;
+    private String parameterValue;
 
-    public EditAuctionRequest(Long id, String title, String description, Double price, String category) {
+    public EditAuctionRequest(Long id, String title, String description, Double price, String category,
+                              String parameterKey, String parameterValue) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.category = category;
+        this.parameterKey = parameterKey;
+        this.parameterValue = parameterValue;
+    }
+
+    public String getParameterKey() {
+        return parameterKey;
+    }
+
+    public void setParameterKey(String parameterKey) {
+        this.parameterKey = parameterKey;
+    }
+
+    public String getParameterValue() {
+        return parameterValue;
+    }
+
+    public void setParameterValue(String parameterValue) {
+        this.parameterValue = parameterValue;
     }
 
     public String getTitle() {

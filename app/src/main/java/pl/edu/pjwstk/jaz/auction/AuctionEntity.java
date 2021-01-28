@@ -25,6 +25,17 @@ public class AuctionEntity {
     @JoinColumn(name = "creator_id", referencedColumnName = "id")
     private UserEntity author;
 
+    public AuctionEntity(String title, String description, Double price, CategoryEntity category, UserEntity author) {
+        this.title = title;
+        this.description = description;
+        this.price = price;
+        this.category = category;
+        this.author = author;
+    }
+
+    public AuctionEntity() {
+    }
+
     public CategoryEntity getCategory() {
         return category;
     }
