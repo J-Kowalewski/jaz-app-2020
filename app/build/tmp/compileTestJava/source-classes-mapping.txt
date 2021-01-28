@@ -6,9 +6,11 @@ pl/edu/pjwstk/jaz/RestAssurePortListener.java
  pl.edu.pjwstk.jaz.RestAssurePortListener
 pl/edu/pjwstk/jaz/average/AverageControllerIT.java
  pl.edu.pjwstk.jaz.average.AverageControllerIT
+pl/edu/pjwstk/jaz/LoginTest.java
+ pl.edu.pjwstk.jaz.LoginTest
 pl/edu/pjwstk/jaz/TestConfig.java
  pl.edu.pjwstk.jaz.TestConfig
 pl/edu/pjwstk/jaz/TestContextHolder.java
  pl.edu.pjwstk.jaz.TestContextHolder
-pl/edu/pjwstk/jaz/LoginTest.java
- pl.edu.pjwstk.jaz.LoginTest
+pl/edu/pjwstk/jaz/EndpointTest.java
+ pl.edu.pjwstk.jaz.EndpointTest
