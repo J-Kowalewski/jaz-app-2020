@@ -261,4 +261,88 @@ public class EndpointTest {
                 .then()
                 .statusCode(HttpStatus.FORBIDDEN.value());
     }
+    @Test
+    public void getCorrectIdAuctionTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/auction/11")
+                .then()
+                .statusCode(HttpStatus.OK.value());
+    }
+    @Test
+    public void getIncorrectIdAuctionTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/auction/15685681")
+                .then()
+                .statusCode(HttpStatus.NOT_FOUND.value());
+    }
+    @Test
+    public void getCorrectIdPhotoTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/photo/11")
+                .then()
+                .statusCode(HttpStatus.OK.value());
+    }
+    @Test
+    public void getIncorrectIdPhotoTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/photo/15685681")
+                .then()
+                .statusCode(HttpStatus.NOT_FOUND.value());
+    }
+    @Test
+    public void getCorrectIdCategoryTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/category/4")
+                .then()
+                .statusCode(HttpStatus.OK.value());
+    }
+    @Test
+    public void getIncorrectIdCategoryTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore/category/15685681")
+                .then()
+                .statusCode(HttpStatus.NOT_FOUND.value());
+    }
 }

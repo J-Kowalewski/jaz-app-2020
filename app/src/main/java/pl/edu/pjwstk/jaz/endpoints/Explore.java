@@ -14,6 +14,7 @@ import pl.edu.pjwstk.jaz.photo.PhotoService;
 import pl.edu.pjwstk.jaz.user.UserEntity;
 import pl.edu.pjwstk.jaz.user.UserService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @PreAuthorize("hasAnyAuthority('user')")
@@ -32,8 +33,25 @@ public class Explore {
     }
 
     @GetMapping("/explore")
-    public List<Object[]> explore(){
-        return auctionService.findAllAuctions();
+    public List<GetAuctionRequest> explore(){
+        var auctionList = auctionService.findAllAuctions();
+        List<GetAuctionRequest> responseList = new ArrayList<>();
+        auctionList.forEach(auctionEntity -> {
+            var photo = photoService.getPhotos(auctionEntity.getId());
+            var parameter = auctionService.findParameterById(auctionEntity.getId());
+            var getAuctionRequest = new GetAuctionRequest(
+                    auctionEntity.getId(),
+                    auctionEntity.getTitle(),
+                    auctionEntity.getDescription(),
+                    auctionEntity.getPrice(),
+                    auctionEntity.getCategory().getName(),
+                    auctionEntity.getAuthor().getUsername(),
+                    photo,
+                    parameter.getParameter().getKey(),
+                    parameter.getValue());
+            responseList.add(getAuctionRequest);
+        });
+        return responseList;
     }
 
     @GetMapping("/explore/auction/{id}")

@@ -1,321 +1,318 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.edu.pjwstk.jaz.EndpointTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-28T22:50:43" hostname="debian" time="0.806">
+<testsuite name="pl.edu.pjwstk.jaz.EndpointTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-29T12:41:08" hostname="debian" time="0.701">
   <properties/>
-  <testcase name="authorShouldBeAbleToAddPhotoToAuction" classname="pl.edu.pjwstk.jaz.EndpointTest" time="0.806"/>
-  <system-out><![CDATA[23:50:39.843 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class pl.edu.pjwstk.jaz.EndpointTest]
-23:50:39.858 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-23:50:39.872 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-23:50:39.918 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [pl.edu.pjwstk.jaz.EndpointTest] from class [org.springframework.test.context.support.DefaultTestContextBootstrapper]
-23:50:39.941 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjwstk.jaz.EndpointTest], using DelegatingSmartContextLoader
-23:50:39.948 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to GenericGroovyXmlContextLoader to process context configuration [ContextConfigurationAttributes@e59be48 declaringClass = 'pl.edu.pjwstk.jaz.EndpointTest', classes = '{}', locations = '{}', inheritLocations = false, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
-23:50:39.954 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.jaz.EndpointTest]: class path resource [pl/edu/pjwstk/jaz/EndpointTest-context.xml] does not exist
-23:50:39.955 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.jaz.EndpointTest]: class path resource [pl/edu/pjwstk/jaz/EndpointTestContext.groovy] does not exist
-23:50:39.956 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [pl.edu.pjwstk.jaz.EndpointTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-23:50:39.957 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@e59be48 declaringClass = 'pl.edu.pjwstk.jaz.EndpointTest', classes = '{}', locations = '{}', inheritLocations = false, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
-23:50:39.959 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.edu.pjwstk.jaz.EndpointTest]: EndpointTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:50:40.042 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.043 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - @TestExecutionListeners is not present for class [pl.edu.pjwstk.jaz.EndpointTest]: using defaults.
-23:50:40.044 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-23:50:40.068 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3b3e1934, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72019359, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@271b170a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4d8f4ed5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@63309e9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7856c92d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@70a326a, org.springframework.test.context.event.EventPublishingTestExecutionListener@30c42db8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e261608, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6077bd40, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@36b85a46, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@270008c4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3908dc7a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@64c8fba6]
-23:50:40.074 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.076 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.088 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.088 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.089 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.090 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:40.092 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@13ac8292 testClass = EndpointTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-23:50:42.274 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:42.292 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:42.316 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:42.317 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:42.318 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:42.319 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:42.319 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:42.319 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
-23:50:42.320 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
-23:50:42.321 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:42.321 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:42.322 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 37[\r][\n]"
-23:50:42.322 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:42.322 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:42.322 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:42.323 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:42.323 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:42.323 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
-23:50:42.323 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 37
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:42.324 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:42.325 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user","password":"user"}"
-23:50:42.331 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
-23:50:42.333 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:42.333 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:42.333 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:42.333 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:42 GMT[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:42.334 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:42.335 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
-23:50:42.336 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
-23:50:42.336 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:42.340 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:42.340 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:42 GMT
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:42.341 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:42.350 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:42.372 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:42.373 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:42.428 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:42.429 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:42.430 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:42.430 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:42.430 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:42.430 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:42.430 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:42.431 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:42.431 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:42.432 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:42.432 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:42.432 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:42.432 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:42.433 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:42.433 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:42.433 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user2","password":"user2"}"
-23:50:42.438 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
-23:50:42.438 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:42.438 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:42.439 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:42.439 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:42.439 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:42.439 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:42.439 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:42.440 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
-23:50:42.440 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:42 GMT[\r][\n]"
-23:50:42.440 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:42.440 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:42.440 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:42.441 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:42.441 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
-23:50:42.442 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:42 GMT
-23:50:42.442 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:42.442 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:42.442 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:42.443 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:42.443 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:42.472 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:42.472 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:42.474 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:42.475 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:42.475 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:42.475 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:42.475 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:42.475 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
-23:50:42.475 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
-23:50:42.475 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:42.475 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:42.476 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
-23:50:42.476 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:42.476 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:42.477 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:42.477 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:42.477 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:42.478 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:42.479 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:42.479 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"admin","password":"admin"}"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:42.484 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:42 GMT[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:42.485 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:42 GMT
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:42.486 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:42.487 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:42.487 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:42.488 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:42.528 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:42.529 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:42.531 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:42.531 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:42.532 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:42.533 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:42.534 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:42.535 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/login HTTP/1.1
-23:50:42.535 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/login HTTP/1.1[\r][\n]"
-23:50:42.536 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:42.536 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:42.537 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
-23:50:42.537 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:42.537 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:42.538 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:42.538 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:42.538 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:42.539 [Test worker] DEBUG org.apache.http.headers - >> POST /api/login HTTP/1.1
-23:50:42.539 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:42.539 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:42.539 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
-23:50:42.539 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:42.540 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:42.540 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:42.540 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:42.540 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"admin","password":"admin"}"
-23:50:42.702 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 202 [\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Set-Cookie: JSESSIONID=8044C80A3BB657CFE6F53BC2C522F884; Path=/api; HttpOnly[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 9[\r][\n]"
-23:50:42.703 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:42 GMT[\r][\n]"
-23:50:42.704 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:42.704 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:42.704 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:42.704 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 202 
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 202 
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Set-Cookie: JSESSIONID=8044C80A3BB657CFE6F53BC2C522F884; Path=/api; HttpOnly
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:42.704 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 9
-23:50:42.705 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:42 GMT
-23:50:42.705 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:42.706 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:42.706 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:42.707 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:42.707 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:42.789 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:42.789 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:42.791 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:42.791 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:42.791 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:42.791 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:42.791 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:42.791 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/add/category HTTP/1.1
-23:50:42.791 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/add/category HTTP/1.1[\r][\n]"
-23:50:42.793 [Test worker] DEBUG org.apache.http.wire -  >> "Cookie: JSESSIONID=8044C80A3BB657CFE6F53BC2C522F884[\r][\n]"
-23:50:42.794 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:42.794 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 24[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:42.795 [Test worker] DEBUG org.apache.http.headers - >> POST /api/add/category HTTP/1.1
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Cookie: JSESSIONID=8044C80A3BB657CFE6F53BC2C522F884
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 24
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:42.796 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:42.798 [Test worker] DEBUG org.apache.http.wire -  >> "{"name":"test category"}"
-23:50:42.820 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 201 [\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:42.821 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 16[\r][\n]"
-23:50:42.822 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:42 GMT[\r][\n]"
-23:50:42.822 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:42.822 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:42.822 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:42.822 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 201 
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 16
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:42 GMT
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:42.822 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:42.823 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:42.823 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:42.823 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:42.824 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:42.824 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
-23:50:42.832 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@13ac8292 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@682ca5eb, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]]].
-23:50:42.834 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to load context from [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
-23:50:42.834 [Test worker] DEBUG org.springframework.test.context.support.AbstractGenericContextLoader - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
-23:50:42.897 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54244<->127.0.0.1:8080 closed
-23:50:42.901 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54242<->127.0.0.1:8080 closed
-23:50:42.902 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54238<->127.0.0.1:8080 closed
-23:50:42.904 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54236<->127.0.0.1:8080 closed
-23:50:42.906 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54240<->127.0.0.1:8080 closed
-23:50:42.910 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
-23:50:42.911 [Test worker] DEBUG org.springframework.test.context.support.AnnotationConfigContextLoader - Registering component classes: {}
-23:50:42.935 [Test worker] WARN org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+  <testcase name="getIncorrectIdCategoryTest" classname="pl.edu.pjwstk.jaz.EndpointTest" time="0.701"/>
+  <system-out><![CDATA[13:41:04.953 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class pl.edu.pjwstk.jaz.EndpointTest]
+13:41:04.968 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+13:41:04.989 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+13:41:05.026 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [pl.edu.pjwstk.jaz.EndpointTest] from class [org.springframework.test.context.support.DefaultTestContextBootstrapper]
+13:41:05.044 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [pl.edu.pjwstk.jaz.EndpointTest], using DelegatingSmartContextLoader
+13:41:05.049 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to GenericGroovyXmlContextLoader to process context configuration [ContextConfigurationAttributes@3ce1b5f8 declaringClass = 'pl.edu.pjwstk.jaz.EndpointTest', classes = '{}', locations = '{}', inheritLocations = false, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+13:41:05.053 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.jaz.EndpointTest]: class path resource [pl/edu/pjwstk/jaz/EndpointTest-context.xml] does not exist
+13:41:05.054 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [pl.edu.pjwstk.jaz.EndpointTest]: class path resource [pl/edu/pjwstk/jaz/EndpointTestContext.groovy] does not exist
+13:41:05.055 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [pl.edu.pjwstk.jaz.EndpointTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:41:05.056 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to process context configuration [ContextConfigurationAttributes@3ce1b5f8 declaringClass = 'pl.edu.pjwstk.jaz.EndpointTest', classes = '{}', locations = '{}', inheritLocations = false, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+13:41:05.057 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.edu.pjwstk.jaz.EndpointTest]: EndpointTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:41:05.126 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.127 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - @TestExecutionListeners is not present for class [pl.edu.pjwstk.jaz.EndpointTest]: using defaults.
+13:41:05.128 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+13:41:05.153 [Test worker] INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c837287, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@219faee7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@15f3e492, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3933957d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e83df96, org.springframework.test.context.transaction.TransactionalTestExecutionListener@42b7a237, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@48ea1987, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d57f59a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d28e8c9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12f15941, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@acf5cb9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@58e6835f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@72a2562a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a01226e]
+13:41:05.159 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.161 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.172 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.173 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.174 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.174 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:05.176 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5d5d3229 testClass = EndpointTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+13:41:07.787 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:07.802 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:07.824 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:07.826 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:07.826 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:07.827 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:07.827 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:07.828 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
+13:41:07.828 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
+13:41:07.830 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:07.830 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:07.830 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 37[\r][\n]"
+13:41:07.830 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:07.830 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:07.831 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:07.831 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:07.831 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:07.831 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
+13:41:07.831 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:07.831 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:07.831 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 37
+13:41:07.831 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:07.832 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:07.832 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:07.832 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:07.832 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user","password":"user"}"
+13:41:07.840 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
+13:41:07.847 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:07.848 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:07.849 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
+13:41:07.849 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:07 GMT[\r][\n]"
+13:41:07.849 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:07.849 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:07.849 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:07.850 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
+13:41:07.850 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:07.851 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:07.852 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
+13:41:07.852 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:07 GMT
+13:41:07.852 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:07.852 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:07.860 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:07.887 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:07.887 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:07.943 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:07.944 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:07.945 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:07.945 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:07.946 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:07.946 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:07.946 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:07.946 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
+13:41:07.946 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
+13:41:07.947 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:07.947 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:07.948 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
+13:41:07.948 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:07.949 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:07.949 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:07.950 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:07.950 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:07.951 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
+13:41:07.951 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:07.951 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:07.952 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
+13:41:07.952 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:07.953 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:07.953 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:07.953 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:07.954 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user2","password":"user2"}"
+13:41:07.963 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
+13:41:07.964 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:07.964 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:07.965 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:07.965 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:07.966 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:07.966 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:07.966 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:07.967 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
+13:41:07.967 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:07 GMT[\r][\n]"
+13:41:07.968 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:07.968 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:07.968 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:07.968 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
+13:41:07.968 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
+13:41:07.968 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:07.968 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:07.969 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
+13:41:07.970 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:07 GMT
+13:41:07.970 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:07.970 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:07.971 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:07.972 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:07.972 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:08.010 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:08.011 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:08.012 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:08.012 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:08.013 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:08.013 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:08.013 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:08.013 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/register HTTP/1.1
+13:41:08.013 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/register HTTP/1.1[\r][\n]"
+13:41:08.013 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:08.014 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:08.014 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
+13:41:08.014 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:08.014 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:08.014 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:08.015 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:08.015 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> POST /api/register HTTP/1.1
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:08.015 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:08.016 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:08.016 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:08.016 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"admin","password":"admin"}"
+13:41:08.026 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
+13:41:08.027 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:08.027 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:08.028 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:08.028 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 23[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:07 GMT[\r][\n]"
+13:41:08.029 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:08.030 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:08.030 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:08.030 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
+13:41:08.030 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
+13:41:08.030 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:08.030 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:08.030 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 23
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:07 GMT
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:08.031 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:08.032 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:08.032 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:08.033 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:08.062 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:08.062 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:08.063 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:08.064 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:08.064 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:08.064 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:08.064 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:08.064 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/login HTTP/1.1
+13:41:08.065 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/login HTTP/1.1[\r][\n]"
+13:41:08.065 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:08.066 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:08.066 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
+13:41:08.066 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:08.067 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:08.067 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:08.067 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:08.068 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> POST /api/login HTTP/1.1
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:08.068 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:08.069 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:08.069 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:08.069 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"admin","password":"admin"}"
+13:41:08.291 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 202 [\r][\n]"
+13:41:08.292 [Test worker] DEBUG org.apache.http.wire -  << "Set-Cookie: JSESSIONID=5F58BCC475B15717C6E30D7E85856C28; Path=/api; HttpOnly[\r][\n]"
+13:41:08.292 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:08.292 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 9[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:07 GMT[\r][\n]"
+13:41:08.293 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:08.294 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:08.294 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:08.294 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 202 
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 202 
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << Set-Cookie: JSESSIONID=5F58BCC475B15717C6E30D7E85856C28; Path=/api; HttpOnly
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:08.294 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 9
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:07 GMT
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:08.295 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:08.296 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:08.296 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:08.296 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:08.316 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:55912<->127.0.0.1:8080 closed
+13:41:08.324 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:55910<->127.0.0.1:8080 closed
+13:41:08.401 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:08.401 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:08.404 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:08.404 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:08.405 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:08.405 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:08.405 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:08.405 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/add/category HTTP/1.1
+13:41:08.406 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/add/category HTTP/1.1[\r][\n]"
+13:41:08.406 [Test worker] DEBUG org.apache.http.wire -  >> "Cookie: JSESSIONID=5F58BCC475B15717C6E30D7E85856C28[\r][\n]"
+13:41:08.407 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:08.407 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:08.407 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 24[\r][\n]"
+13:41:08.407 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:08.408 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:08.408 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:08.408 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:08.409 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:08.409 [Test worker] DEBUG org.apache.http.headers - >> POST /api/add/category HTTP/1.1
+13:41:08.409 [Test worker] DEBUG org.apache.http.headers - >> Cookie: JSESSIONID=5F58BCC475B15717C6E30D7E85856C28
+13:41:08.409 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:08.410 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:08.410 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 24
+13:41:08.410 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:08.410 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:08.410 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:08.411 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:08.411 [Test worker] DEBUG org.apache.http.wire -  >> "{"name":"test category"}"
+13:41:08.432 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 409 [\r][\n]"
+13:41:08.433 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:08.434 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:08.435 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:08.436 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:08.436 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:08.437 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:08.437 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:08.438 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 43[\r][\n]"
+13:41:08.438 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:07 GMT[\r][\n]"
+13:41:08.439 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:08.440 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:08.440 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:08.441 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 409 
+13:41:08.442 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 409 
+13:41:08.442 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:08.443 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:08.443 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:08.444 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:08.445 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:08.445 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:08.445 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:08.446 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 43
+13:41:08.446 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:07 GMT
+13:41:08.447 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:08.447 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:08.448 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:08.450 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:08.450 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:08.454 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:08.455 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [pl.edu.pjwstk.jaz.EndpointTest]
+13:41:08.471 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@5d5d3229 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@648f35dc, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]]].
+13:41:08.474 [Test worker] DEBUG org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - Delegating to AnnotationConfigContextLoader to load context from [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+13:41:08.476 [Test worker] DEBUG org.springframework.test.context.support.AbstractGenericContextLoader - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+13:41:08.550 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+13:41:08.551 [Test worker] DEBUG org.springframework.test.context.support.AnnotationConfigContextLoader - Registering component classes: {}
+13:41:08.573 [Test worker] WARN org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -324,207 +321,150 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-23:50:42.939 [Test worker] DEBUG org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@5012b05
-23:50:42.956 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-23:50:42.978 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
-23:50:43.011 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-23:50:43.013 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-23:50:43.016 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-23:50:43.019 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
-23:50:43.026 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
-23:50:43.027 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
-23:50:43.061 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Storing ApplicationContext [83962629] in cache under key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.061 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
-23:50:43.102 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.103 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
-23:50:43.108 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@13ac8292 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@682ca5eb, testMethod = authorShouldBeAbleToAddPhotoToAuction@EndpointTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
-23:50:43.116 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.117 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
-23:50:43.118 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.118 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
-23:50:43.518 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.519 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
-23:50:43.553 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:43.553 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:43.555 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:43.555 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:43.555 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:43.556 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:43.559 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:43.559 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/login HTTP/1.1
-23:50:43.559 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/login HTTP/1.1[\r][\n]"
-23:50:43.559 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:43.559 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:43.559 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> POST /api/login HTTP/1.1
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 39
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:43.560 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:43.561 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:43.561 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user2","password":"user2"}"
-23:50:43.697 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 202 [\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Set-Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED; Path=/api; HttpOnly[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 9[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:43 GMT[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:43.698 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:43.699 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:43.699 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 202 
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 202 
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Set-Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED; Path=/api; HttpOnly
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 9
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:43 GMT
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:43.699 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:43.700 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:43.701 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
-23:50:43.701 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-23:50:43.740 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:43.740 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:43.741 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:43.742 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:43.742 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:43.743 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:43.743 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:43.743 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/add/auction HTTP/1.1
-23:50:43.743 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/add/auction HTTP/1.1[\r][\n]"
-23:50:43.743 [Test worker] DEBUG org.apache.http.wire -  >> "Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED[\r][\n]"
-23:50:43.744 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 153[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> POST /api/add/auction HTTP/1.1
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 153
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:43.745 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:43.746 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:43.746 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:43.746 [Test worker] DEBUG org.apache.http.wire -  >> "{"title":"test4 title","description":"test4 description","price":20.2,"parameterKey":"test4Key","parameterValue":"test4Value","category":"test category"}"
-23:50:43.759 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 201 [\r][\n]"
-23:50:43.760 [Test worker] DEBUG org.apache.http.wire -  << "id: 34[\r][\n]"
-23:50:43.761 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:43.761 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:43.761 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:43.761 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:43.762 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:43.762 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:43.762 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
-23:50:43.762 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:43 GMT[\r][\n]"
-23:50:43.762 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:43.763 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:43.763 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:43.763 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 
-23:50:43.763 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 201 
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << id: 34
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:43.764 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:43.765 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:43.765 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
-23:50:43.765 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:43 GMT
-23:50:43.765 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:43.765 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:43.765 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:43.818 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
-23:50:43.819 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
-23:50:43.821 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-23:50:43.821 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-23:50:43.821 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-23:50:43.821 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-23:50:43.821 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-23:50:43.822 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/add/photo HTTP/1.1
-23:50:43.822 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/add/photo HTTP/1.1[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 35[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
-23:50:43.823 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
-23:50:43.824 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-23:50:43.824 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> POST /api/add/photo HTTP/1.1
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Cookie: JSESSIONID=2A5A4D17297C46EB1AF614359C608AED
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 35
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
-23:50:43.824 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
-23:50:43.824 [Test worker] DEBUG org.apache.http.wire -  >> "{"link":"testlink","auction_id":34}"
-23:50:43.841 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 202 [\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 28 Jan 2021 22:50:43 GMT[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
-23:50:43.842 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
-23:50:43.843 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 202 
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 202 
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 28 Jan 2021 22:50:43 GMT
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
-23:50:43.843 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
-23:50:43.844 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
-23:50:43.900 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.900 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
-23:50:43.902 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.903 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
-23:50:43.904 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.904 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
-23:50:43.905 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.905 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1]
-23:50:43.907 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.907 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1]
-23:50:43.910 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.911 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1]
-23:50:43.912 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@13ac8292 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@682ca5eb, testMethod = authorShouldBeAbleToAddPhotoToAuction@EndpointTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
-23:50:43.914 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [83962629] from cache with key [[MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
-23:50:43.915 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@6f2240c4 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1]
-23:50:43.915 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test class: context [DefaultTestContext@13ac8292 testClass = EndpointTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7046be33 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3282a17f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@735fdef9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a9b0651, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+13:41:08.579 [Test worker] DEBUG org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@af87bbd
+13:41:08.594 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+13:41:08.618 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+13:41:08.649 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:55916<->127.0.0.1:8080 closed
+13:41:08.650 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+13:41:08.653 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+13:41:08.656 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+13:41:08.659 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+13:41:08.667 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+13:41:08.668 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+13:41:08.708 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:55914<->127.0.0.1:8080 closed
+13:41:08.711 [Finalizer] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:55908<->127.0.0.1:8080 closed
+13:41:08.713 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Storing ApplicationContext [184056765] in cache under key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:08.713 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+13:41:08.741 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:08.741 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+13:41:08.747 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: context [DefaultTestContext@5d5d3229 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@648f35dc, testMethod = getIncorrectIdCategoryTest@EndpointTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+13:41:08.754 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:08.754 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+13:41:08.755 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:08.755 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+13:41:09.085 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.085 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+13:41:09.122 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:09.124 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:09.127 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:09.128 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:09.128 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:09.128 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:09.129 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:09.129 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/login HTTP/1.1
+13:41:09.129 [Test worker] DEBUG org.apache.http.wire -  >> "POST /api/login HTTP/1.1[\r][\n]"
+13:41:09.130 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:09.130 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:41:09.130 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 37[\r][\n]"
+13:41:09.131 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:09.131 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:09.131 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:09.132 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:09.133 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:09.133 [Test worker] DEBUG org.apache.http.headers - >> POST /api/login HTTP/1.1
+13:41:09.133 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:09.134 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json; charset=UTF-8
+13:41:09.135 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 37
+13:41:09.136 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:09.137 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:09.137 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:09.138 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:09.139 [Test worker] DEBUG org.apache.http.wire -  >> "{"username":"user","password":"user"}"
+13:41:09.341 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 202 [\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Set-Cookie: JSESSIONID=C447304313EEF78C57AF0D72B1A47E2A; Path=/api; HttpOnly[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+13:41:09.342 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 9[\r][\n]"
+13:41:09.343 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:09 GMT[\r][\n]"
+13:41:09.343 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:09.343 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:09.343 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:09.343 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 202 
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 202 
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << Set-Cookie: JSESSIONID=C447304313EEF78C57AF0D72B1A47E2A; Path=/api; HttpOnly
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:09.343 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:09.344 [Test worker] DEBUG org.apache.http.headers - << Content-Type: text/plain;charset=UTF-8
+13:41:09.344 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 9
+13:41:09.344 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:09 GMT
+13:41:09.344 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:09.344 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:09.344 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:09.347 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/plain;charset=UTF-8
+13:41:09.348 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+13:41:09.373 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+13:41:09.373 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+13:41:09.374 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+13:41:09.374 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:41:09.374 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+13:41:09.375 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+13:41:09.375 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+13:41:09.375 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /api/explore/category/15685681 HTTP/1.1
+13:41:09.375 [Test worker] DEBUG org.apache.http.wire -  >> "GET /api/explore/category/15685681 HTTP/1.1[\r][\n]"
+13:41:09.375 [Test worker] DEBUG org.apache.http.wire -  >> "Cookie: JSESSIONID=C447304313EEF78C57AF0D72B1A47E2A[\r][\n]"
+13:41:09.375 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+13:41:09.375 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+13:41:09.376 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+13:41:09.376 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)[\r][\n]"
+13:41:09.376 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:41:09.376 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> GET /api/explore/category/15685681 HTTP/1.1
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> Cookie: JSESSIONID=C447304313EEF78C57AF0D72B1A47E2A
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+13:41:09.376 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.9)
+13:41:09.377 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 404 [\r][\n]"
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "X-Content-Type-Options: nosniff[\r][\n]"
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "X-XSS-Protection: 1; mode=block[\r][\n]"
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache, no-store, max-age=0, must-revalidate[\r][\n]"
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "Pragma: no-cache[\r][\n]"
+13:41:09.383 [Test worker] DEBUG org.apache.http.wire -  << "Expires: 0[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "X-Frame-Options: DENY[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "Date: Fri, 29 Jan 2021 12:41:09 GMT[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+13:41:09.384 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+13:41:09.385 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 404 
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 404 
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << X-Content-Type-Options: nosniff
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << X-XSS-Protection: 1; mode=block
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << Pragma: no-cache
+13:41:09.385 [Test worker] DEBUG org.apache.http.headers - << Expires: 0
+13:41:09.386 [Test worker] DEBUG org.apache.http.headers - << X-Frame-Options: DENY
+13:41:09.386 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
+13:41:09.386 [Test worker] DEBUG org.apache.http.headers - << Date: Fri, 29 Jan 2021 12:41:09 GMT
+13:41:09.386 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+13:41:09.386 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+13:41:09.387 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+13:41:09.436 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.436 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+13:41:09.438 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.438 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+13:41:09.439 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.439 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
+13:41:09.439 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.440 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1]
+13:41:09.442 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.442 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1]
+13:41:09.445 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.445 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1]
+13:41:09.446 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@5d5d3229 testClass = EndpointTest, testInstance = pl.edu.pjwstk.jaz.EndpointTest@648f35dc, testMethod = getIncorrectIdCategoryTest@EndpointTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null].
+13:41:09.448 [Test worker] DEBUG org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext [184056765] from cache with key [[MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+13:41:09.449 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@64848b81 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1]
+13:41:09.449 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test class: context [DefaultTestContext@5d5d3229 testClass = EndpointTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@9711685 testClass = EndpointTest, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@462e452e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4b1db326, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@60b6fbb9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

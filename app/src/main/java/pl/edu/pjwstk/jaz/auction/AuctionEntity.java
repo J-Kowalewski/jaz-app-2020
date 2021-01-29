@@ -12,7 +12,6 @@ public class AuctionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(unique = true)
     private String title;
     private String description;
     private Double price;

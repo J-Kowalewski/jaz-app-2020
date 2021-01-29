@@ -49,8 +49,8 @@ public class AuctionService {
         }
     }
 
-    public List<Object[]> findAllAuctions() {
-        return entityManager.createQuery("SELECT a.id,a.title,a.description,a.price,a.category.name,a.author.username, p.link FROM AuctionEntity a, PhotoEntity p WHERE p.auction.id=a.id", Object[].class)
+    public List<AuctionEntity> findAllAuctions() {
+        return entityManager.createQuery("SELECT a FROM AuctionEntity a", AuctionEntity.class)
                 .getResultList();
     }
 
