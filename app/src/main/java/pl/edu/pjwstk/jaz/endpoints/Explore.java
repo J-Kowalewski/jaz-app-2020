@@ -37,7 +37,13 @@ public class Explore {
         var auctionList = auctionService.findAllAuctions();
         List<GetAuctionRequest> responseList = new ArrayList<>();
         auctionList.forEach(auctionEntity -> {
-            var photo = photoService.getPhotos(auctionEntity.getId());
+            String photo;
+            try{
+                photo = photoService.getPhotos(auctionEntity.getId()).get(0);
+            }
+            catch (IndexOutOfBoundsException e){
+                photo = null;
+            }
             var parameter = auctionService.findParameterById(auctionEntity.getId());
             var getAuctionRequest = new GetAuctionRequest(
                     auctionEntity.getId(),
@@ -60,7 +66,7 @@ public class Explore {
         if(auction==null){
             return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
         }
-        var photo = photoService.getPhotos(id);
+        var photo = photoService.getPhotos(id).get(0);
         var parameter = auctionService.findParameterById(id);
         var getAuctionRequest = new GetAuctionRequest(
                 auction.getId(),

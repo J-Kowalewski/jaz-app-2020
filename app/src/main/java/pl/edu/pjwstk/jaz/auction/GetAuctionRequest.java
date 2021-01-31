@@ -12,12 +12,12 @@ public class GetAuctionRequest {
     private Double price;
     private String category;
     private String author;
-    private List<String> photo;
+    private String photo;
     private String parameterKey;
     private String parameterValue;
 
     public GetAuctionRequest(Long id, String title, String description, Double price, String category, String author,
-                             List<String> photo, String parameterKey, String parameterValue) {
+                             String photo, String parameterKey, String parameterValue) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -29,11 +29,11 @@ public class GetAuctionRequest {
         this.parameterValue = parameterValue;
     }
 
-    public List<String> getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(List<String> photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 

@@ -345,4 +345,18 @@ public class EndpointTest {
                 .then()
                 .statusCode(HttpStatus.NOT_FOUND.value());
     }
+    @Test
+    public void getAuctionListTest() {
+        var response = given()
+                .when()
+                .body(new LoginRequest("user", "user"))
+                .contentType(ContentType.JSON)
+                .post("/api/login")
+                .thenReturn();
+        given()
+                .cookies(response.getCookies())
+                .get("/api/explore")
+                .then()
+                .statusCode(HttpStatus.OK.value());
+    }
 }
