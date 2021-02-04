@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import pl.edu.pjwstk.jaz.auction.AuctionEntity;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -19,9 +20,14 @@ public class PhotoService {
         this.entityManager = entityManager;
     }
     public List<String> getPhotos(Long id){
-        return entityManager.createQuery("SELECT p.link FROM PhotoEntity p WHERE p.auction.id =:id", String.class)
-                .setParameter("id", id)
-                .getResultList();
+        try {
+            return entityManager.createQuery("SELECT p.link FROM PhotoEntity p WHERE p.auction.id =:id", String.class)
+                    .setParameter("id", id)
+                    .getResultList();
+        }catch(NoResultException e){
+            return null;
+        }
+
     }
     public void savePhoto(String link, AuctionEntity auctionEntity){
         PhotoEntity photoEntity = new PhotoEntity(link,auctionEntity);

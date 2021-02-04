@@ -1,37 +1,43 @@
 package pl.edu.pjwstk.jaz.auction;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class AddAuctionRequest {
     private String title;
     private String description;
     private Double price;
     private String categoryName;
-    private String parameterKey;
-    private String parameterValue;
+//    private String parameterKey;
+//    private String parameterValue;
+    private List<String> photoList;
+    private HashMap<String,String> parameterMap;
 
     public AddAuctionRequest(String title, String description, Double price, String category,
-                             String parameterKey, String parameter_Value) {
+                             List<String> photoList, HashMap<String,String> parameterMap) {
         this.title = title;
         this.description = description;
         this.price = price;
         this.categoryName = category;
-        this.parameterKey = parameterKey;
-        this.parameterValue = parameter_Value;
+        this.photoList = photoList;
+        this.parameterMap = parameterMap;
     }
 
-    public String getParameterKey() {
-        return parameterKey;
+    public HashMap<String, String> getParameterMap() {
+        return parameterMap;
     }
 
-    public void setParameterKey(String parameterKey) {
-        this.parameterKey = parameterKey;
+    public void setParameterMap(HashMap<String, String> parameterMap) {
+        this.parameterMap = parameterMap;
     }
 
-    public String getParameterValue() {
-        return parameterValue;
+    public List<String> getPhotoList() {
+        return photoList;
     }
 
-    public void setParameterValue(String parameterValue) {
-        this.parameterValue = parameterValue;
+    public void setPhotoList(List<String> photoList) {
+        this.photoList = photoList;
     }
 
     public String getTitle() {

@@ -15,6 +15,7 @@ import pl.edu.pjwstk.jaz.user.UserEntity;
 import pl.edu.pjwstk.jaz.user.UserService;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @PreAuthorize("hasAnyAuthority('user')")
@@ -44,7 +45,11 @@ public class Explore {
             catch (IndexOutOfBoundsException e){
                 photo = null;
             }
-            var parameter = auctionService.findParameterById(auctionEntity.getId());
+            var auctionParameters = auctionEntity.getParameters();
+            HashMap<String,String> parameters = new HashMap<>();
+            auctionParameters.forEach(auctionParameterEntity -> {
+                parameters.put(auctionParameterEntity.getParameter().getKey(),auctionParameterEntity.getValue());
+            });
             var getAuctionRequest = new GetAuctionRequest(
                     auctionEntity.getId(),
                     auctionEntity.getTitle(),
@@ -53,8 +58,8 @@ public class Explore {
                     auctionEntity.getCategory().getName(),
                     auctionEntity.getAuthor().getUsername(),
                     photo,
-                    parameter.getParameter().getKey(),
-                    parameter.getValue());
+                    parameters
+            );
             responseList.add(getAuctionRequest);
         });
         return responseList;
@@ -66,8 +71,18 @@ public class Explore {
         if(auction==null){
             return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
         }
-        var photo = photoService.getPhotos(id).get(0);
-        var parameter = auctionService.findParameterById(id);
+        String photo;
+        try{
+            photo = photoService.getPhotos(auction.getId()).get(0);
+        }
+        catch (IndexOutOfBoundsException e){
+            photo = null;
+        }
+        var auctionParameters = auction.getParameters();
+        HashMap<String,String> parameters = new HashMap<>();
+        auctionParameters.forEach(auctionParameterEntity -> {
+            parameters.put(auctionParameterEntity.getParameter().getKey(),auctionParameterEntity.getValue());
+        });
         var getAuctionRequest = new GetAuctionRequest(
                 auction.getId(),
                 auction.getTitle(),
@@ -76,8 +91,8 @@ public class Explore {
                 auction.getCategory().getName(),
                 auction.getAuthor().getUsername(),
                 photo,
-                parameter.getParameter().getKey(),
-                parameter.getValue());
+                parameters
+        );
         return new ResponseEntity<>(getAuctionRequest,HttpStatus.OK);
     }
 

@@ -2,9 +2,14 @@ package pl.edu.pjwstk.jaz.auction;
 
 import pl.edu.pjwstk.jaz.User;
 import pl.edu.pjwstk.jaz.category.CategoryEntity;
+import pl.edu.pjwstk.jaz.parameter.AuctionParameterEntity;
 import pl.edu.pjwstk.jaz.user.UserEntity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "auction")
@@ -20,11 +25,14 @@ public class AuctionEntity {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private CategoryEntity category;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "creator_id", referencedColumnName = "id")
     private UserEntity author;
 
-    public AuctionEntity(String title, String description, Double price, CategoryEntity category, UserEntity author) {
+    @OneToMany(mappedBy = "auction")
+    private Set<AuctionParameterEntity> parameters;
+
+    public AuctionEntity(String title, String description, Double price, CategoryEntity category, UserEntity author){
         this.title = title;
         this.description = description;
         this.price = price;
@@ -33,6 +41,14 @@ public class AuctionEntity {
     }
 
     public AuctionEntity() {
+    }
+
+    public Set<AuctionParameterEntity> getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(Set<AuctionParameterEntity> parameters) {
+        this.parameters = parameters;
     }
 
     public CategoryEntity getCategory() {

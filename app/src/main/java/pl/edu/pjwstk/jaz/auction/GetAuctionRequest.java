@@ -3,6 +3,7 @@ package pl.edu.pjwstk.jaz.auction;
 import pl.edu.pjwstk.jaz.category.CategoryEntity;
 import pl.edu.pjwstk.jaz.user.UserEntity;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class GetAuctionRequest {
@@ -13,11 +14,10 @@ public class GetAuctionRequest {
     private String category;
     private String author;
     private String photo;
-    private String parameterKey;
-    private String parameterValue;
+    private HashMap<String,String> parameters;
 
     public GetAuctionRequest(Long id, String title, String description, Double price, String category, String author,
-                             String photo, String parameterKey, String parameterValue) {
+                             String photo, HashMap<String,String> parameters) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -25,8 +25,19 @@ public class GetAuctionRequest {
         this.category = category;
         this.author = author;
         this.photo = photo;
-        this.parameterKey = parameterKey;
-        this.parameterValue = parameterValue;
+        this.parameters = parameters;
+    }
+
+    public GetAuctionRequest() {
+
+    }
+
+    public HashMap<String, String> getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(HashMap<String, String> parameters) {
+        this.parameters = parameters;
     }
 
     public String getPhoto() {
@@ -35,27 +46,6 @@ public class GetAuctionRequest {
 
     public void setPhoto(String photo) {
         this.photo = photo;
-    }
-
-    public GetAuctionRequest() {
-
-    }
-
-
-    public String getParameterKey() {
-        return parameterKey;
-    }
-
-    public void setParameterKey(String parameterKey) {
-        this.parameterKey = parameterKey;
-    }
-
-    public String getParameterValue() {
-        return parameterValue;
-    }
-
-    public void setParameterValue(String parameterValue) {
-        this.parameterValue = parameterValue;
     }
 
     public Long getId() {

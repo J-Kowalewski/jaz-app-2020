@@ -13,6 +13,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Set;
 
 @Service
 @Transactional
@@ -25,17 +26,21 @@ public class AuctionService {
     }
 
     public AuctionEntity saveAuction(String title, String description, Double price, UserEntity author,
-                            CategoryEntity category, String parameterKey, String parameterValue) {
+                            CategoryEntity category) {
         AuctionEntity auctionEntity = new AuctionEntity(title, description, price, category, author);
         entityManager.persist(auctionEntity);
 
-        ParameterEntity parameterEntity = new ParameterEntity(parameterKey);
-        entityManager.persist(parameterEntity);
-
-        AuctionParameterEntity auctionParameterEntity = new AuctionParameterEntity(auctionEntity, parameterEntity, parameterValue);
-        entityManager.persist(auctionParameterEntity);
-
         return auctionEntity;
+    }
+    public ParameterEntity saveParameter(String key){
+        ParameterEntity parameterEntity = new ParameterEntity(key);
+        entityManager.persist(parameterEntity);
+        return parameterEntity;
+    }
+    public AuctionParameterEntity saveAuctionParameter(AuctionEntity auction, ParameterEntity parameter, String value){
+        AuctionParameterEntity auctionParameterEntity = new AuctionParameterEntity(auction,parameter,value);
+        entityManager.persist(auctionParameterEntity);
+        return auctionParameterEntity;
     }
 
     public AuctionEntity findById(Long id) {
@@ -57,11 +62,28 @@ public class AuctionService {
     public void update(AuctionEntity auctionEntity) {
         entityManager.merge(auctionEntity);
     }
-    public AuctionParameterEntity findParameterById(Long id) {
-        return entityManager.createQuery("SELECT p FROM AuctionParameterEntity p WHERE p.auction.id =: id", AuctionParameterEntity.class)
-                .setParameter("id", id)
-                .getSingleResult();
+
+    public AuctionParameterEntity findAuctionParameterById(Long id) {
+        try {
+            return entityManager.createQuery("SELECT p FROM AuctionParameterEntity p WHERE p.auction.id =: id", AuctionParameterEntity.class)
+                    .setParameter("id", id)
+                    .getSingleResult();
+        }
+        catch (NoResultException e){
+            return null;
+        }
     }
+    public ParameterEntity findParameterByKey(String key) {
+        try {
+            return entityManager.createQuery("SELECT p FROM ParameterEntity p WHERE p.key =: key", ParameterEntity.class)
+                    .setParameter("key", key)
+                    .getSingleResult();
+        }
+        catch (NoResultException e){
+            return null;
+        }
+    }
+
     public void updateParameter(AuctionParameterEntity auctionParameterEntity){
         ParameterEntity parameterEntity = auctionParameterEntity.getParameter();
         entityManager.merge(parameterEntity);

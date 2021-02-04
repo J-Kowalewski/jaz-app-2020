@@ -2,7 +2,6 @@ package pl.edu.pjwstk.jaz.endpoints;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.expression.SecurityExpressionRoot;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -52,7 +51,7 @@ public class Edit {
             auction.setCategory(category);
             auctionService.update(auction);
 
-            var parameter = auctionService.findParameterById(request.getId());
+            var parameter = auctionService.findAuctionParameterById(request.getId());
             parameter.setValue(request.getParameterValue());
             parameter.getParameter().setKey(request.getParameterKey());
             auctionService.updateParameter(parameter);

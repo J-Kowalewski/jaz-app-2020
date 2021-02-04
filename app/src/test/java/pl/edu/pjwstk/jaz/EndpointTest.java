@@ -53,180 +53,180 @@ public class EndpointTest {
                 .post("/api/add/category")
                 .thenReturn();
     }
-    @Test
-    public void shouldAddAuction(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user","user"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test1 title","test1 description", 20.20,
-                        "test category","test1Key","test1Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .then()
-                .statusCode(HttpStatus.CREATED.value());
-    }
-    @Test
-    public void shouldNotAddAuctionWithWrongCategory(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user","user"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test2 title","test2 description", 20.20,
-                        "wrong category","test2Key","test2Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .then()
-                .statusCode(HttpStatus.BAD_REQUEST.value());
-    }
-    @Test
-    public void adminShouldBeAbleToAddCategory() {
-        var response = given()
-                .when()
-                .body(new LoginRequest("admin", "admin"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new CategoryRequest("test category 8"))
-                .when()
-                .contentType(ContentType.JSON)
-                .post("/api/add/category")
-                .then()
-                .statusCode(HttpStatus.CREATED.value());
-    }
-    @Test
-    public void userShouldNotBeAbleToAddCategory() {
-        var response = given()
-                .when()
-                .body(new LoginRequest("user", "user"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new CategoryRequest("test category 2"))
-                .when()
-                .contentType(ContentType.JSON)
-                .post("/api/add/category")
-                .then()
-                .statusCode(HttpStatus.FORBIDDEN.value());
-    }
-    @Test
-    public void authorShouldBeAbleToAddPhotoToAuction(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user2","user2"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        var auction = given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
-                        "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new AddPhotoRequest(Long.valueOf(auction.getHeader("id")),"testlink"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/photo")
-                .then()
-                .statusCode(HttpStatus.ACCEPTED.value());
-    }
-    @Test
-    public void otherUserShouldNotBeAbleToAddPhotoToAuction(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user2","user2"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        var auction = given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
-                        "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .thenReturn();
-        response = given()
-                .when()
-                .body(new LoginRequest("user","user"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new AddPhotoRequest(Long.valueOf(auction.getHeader("id")),"testlink"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/photo")
-                .then()
-                .statusCode(HttpStatus.FORBIDDEN.value());
-    }
-    @Test
-    public void authorShouldBeAbleToEditAuction(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user2","user2"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        var auction = given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
-                        "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new EditAuctionRequest(Long.valueOf(auction.getHeader("id")),"edited test title",
-                        "edited test description", 20.20, "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .put("/api/edit/auction")
-                .then()
-                .statusCode(HttpStatus.ACCEPTED.value());
-    }
-    @Test
-    public void otherUserShouldNotBeAbleToEditAuction(){
-        var response = given()
-                .when()
-                .body(new LoginRequest("user2","user2"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        var auction = given()
-                .cookies(response.getCookies())
-                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
-                        "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .post("/api/add/auction")
-                .thenReturn();
-        response = given()
-                .when()
-                .body(new LoginRequest("user","user"))
-                .contentType(ContentType.JSON)
-                .post("/api/login")
-                .thenReturn();
-        given()
-                .cookies(response.getCookies())
-                .body(new EditAuctionRequest(Long.valueOf(auction.getHeader("id")),"edited test title",
-                        "edited test description", 20.20, "test category","test4Key","test4Value"))
-                .contentType(ContentType.JSON)
-                .put("/api/edit/auction")
-                .then()
-                .statusCode(HttpStatus.FORBIDDEN.value());
-    }
+//    @Test
+//    public void shouldAddAuction(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user","user"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test1 title","test1 description", 20.20,
+//                        "test category","test1Key","test1Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .then()
+//                .statusCode(HttpStatus.CREATED.value());
+//    }
+//    @Test
+//    public void shouldNotAddAuctionWithWrongCategory(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user","user"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test2 title","test2 description", 20.20,
+//                        "wrong category","test2Key","test2Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .then()
+//                .statusCode(HttpStatus.BAD_REQUEST.value());
+//    }
+//    @Test
+//    public void adminShouldBeAbleToAddCategory() {
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("admin", "admin"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new CategoryRequest("test category 8"))
+//                .when()
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/category")
+//                .then()
+//                .statusCode(HttpStatus.CREATED.value());
+//    }
+//    @Test
+//    public void userShouldNotBeAbleToAddCategory() {
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user", "user"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new CategoryRequest("test category 2"))
+//                .when()
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/category")
+//                .then()
+//                .statusCode(HttpStatus.FORBIDDEN.value());
+//    }
+//    @Test
+//    public void authorShouldBeAbleToAddPhotoToAuction(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user2","user2"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        var auction = given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
+//                        "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new AddPhotoRequest(Long.valueOf(auction.getHeader("id")),"testlink"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/photo")
+//                .then()
+//                .statusCode(HttpStatus.ACCEPTED.value());
+//    }
+//    @Test
+//    public void otherUserShouldNotBeAbleToAddPhotoToAuction(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user2","user2"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        var auction = given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
+//                        "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .thenReturn();
+//        response = given()
+//                .when()
+//                .body(new LoginRequest("user","user"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new AddPhotoRequest(Long.valueOf(auction.getHeader("id")),"testlink"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/photo")
+//                .then()
+//                .statusCode(HttpStatus.FORBIDDEN.value());
+//    }
+//    @Test
+//    public void authorShouldBeAbleToEditAuction(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user2","user2"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        var auction = given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
+//                        "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new EditAuctionRequest(Long.valueOf(auction.getHeader("id")),"edited test title",
+//                        "edited test description", 20.20, "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .put("/api/edit/auction")
+//                .then()
+//                .statusCode(HttpStatus.ACCEPTED.value());
+//    }
+//    @Test
+//    public void otherUserShouldNotBeAbleToEditAuction(){
+//        var response = given()
+//                .when()
+//                .body(new LoginRequest("user2","user2"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        var auction = given()
+//                .cookies(response.getCookies())
+//                .body(new AddAuctionRequest("test4 title","test4 description", 20.20,
+//                        "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/add/auction")
+//                .thenReturn();
+//        response = given()
+//                .when()
+//                .body(new LoginRequest("user","user"))
+//                .contentType(ContentType.JSON)
+//                .post("/api/login")
+//                .thenReturn();
+//        given()
+//                .cookies(response.getCookies())
+//                .body(new EditAuctionRequest(Long.valueOf(auction.getHeader("id")),"edited test title",
+//                        "edited test description", 20.20, "test category","test4Key","test4Value"))
+//                .contentType(ContentType.JSON)
+//                .put("/api/edit/auction")
+//                .then()
+//                .statusCode(HttpStatus.FORBIDDEN.value());
+//    }
     @Test
     public void adminShouldBeAbleToEditCategory() {
         var response = given()
