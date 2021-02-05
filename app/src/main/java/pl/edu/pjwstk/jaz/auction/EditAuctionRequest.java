@@ -1,6 +1,10 @@
 package pl.edu.pjwstk.jaz.auction;
 
 import pl.edu.pjwstk.jaz.category.CategoryEntity;
+import pl.edu.pjwstk.jaz.user.UserEntity;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class EditAuctionRequest {
     private Long id;
@@ -8,34 +12,48 @@ public class EditAuctionRequest {
     private String description;
     private Double price;
     private String category;
-    private String parameterKey;
-    private String parameterValue;
+    private List<String> photoList;
+    private HashMap<String,String> parameters;
+    private Long version;
 
     public EditAuctionRequest(Long id, String title, String description, Double price, String category,
-                              String parameterKey, String parameterValue) {
+                              List<String> photoList, HashMap<String,String> parameters, Long version) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
         this.category = category;
-        this.parameterKey = parameterKey;
-        this.parameterValue = parameterValue;
+        this.photoList = photoList;
+        this.parameters = parameters;
+        this.version = version;
     }
 
-    public String getParameterKey() {
-        return parameterKey;
+    public EditAuctionRequest() {
+
     }
 
-    public void setParameterKey(String parameterKey) {
-        this.parameterKey = parameterKey;
+    public List<String> getPhotoList() {
+        return photoList;
     }
 
-    public String getParameterValue() {
-        return parameterValue;
+    public void setPhotoList(List<String> photoList) {
+        this.photoList = photoList;
     }
 
-    public void setParameterValue(String parameterValue) {
-        this.parameterValue = parameterValue;
+    public HashMap<String, String> getParameters() {
+        return parameters;
+    }
+
+    public void setParameters(HashMap<String, String> parameters) {
+        this.parameters = parameters;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -70,11 +88,11 @@ public class EditAuctionRequest {
         this.category = category;
     }
 
-    public Long getId() {
-        return id;
+    public Long getVersion() {
+        return version;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setVersion(Long version) {
+        this.version = version;
     }
 }

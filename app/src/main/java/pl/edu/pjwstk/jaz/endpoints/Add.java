@@ -61,8 +61,10 @@ public class Add {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         else{
+            Long version = 0L;
             var auction = auctionService.saveAuction(request.getTitle(),request.getDescription(), request.getPrice(), author,
-                    categoryEntity);
+                    categoryEntity, version);
+
             var photoLinks = request.getPhotoList();
             photoLinks.forEach(s -> {
                 photoService.savePhoto(s,auction);

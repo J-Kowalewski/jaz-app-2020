@@ -40,8 +40,8 @@ pl/edu/pjwstk/jaz/category/CategoryService.java
  pl.edu.pjwstk.jaz.category.CategoryService
 pl/edu/pjwstk/jaz/login/LoginController.java
  pl.edu.pjwstk.jaz.login.LoginController
-pl/edu/pjwstk/jaz/auction/EditAuctionRequest.java
- pl.edu.pjwstk.jaz.auction.EditAuctionRequest
+pl/edu/pjwstk/jaz/auction/GetAuctionRequest.java
+ pl.edu.pjwstk.jaz.auction.GetAuctionRequest
 pl/edu/pjwstk/jaz/ExampleFilter.java
  pl.edu.pjwstk.jaz.ExampleFilter
 pl/edu/pjwstk/jaz/average/AverageController.java
@@ -50,8 +50,6 @@ pl/edu/pjwstk/jaz/parameter/ParameterEntity.java
  pl.edu.pjwstk.jaz.parameter.ParameterEntity
 pl/edu/pjwstk/jaz/user/UserService.java
  pl.edu.pjwstk.jaz.user.UserService
-pl/edu/pjwstk/jaz/auction/AuctionService.java
- pl.edu.pjwstk.jaz.auction.AuctionService
 pl/edu/pjwstk/jaz/register/RegisterController.java
  pl.edu.pjwstk.jaz.register.RegisterController
 pl/edu/pjwstk/jaz/parameter/AuctionParameterEntity.java
@@ -60,13 +58,15 @@ pl/edu/pjwstk/jaz/photo/PhotoEntity.java
  pl.edu.pjwstk.jaz.photo.PhotoEntity
 pl/edu/pjwstk/jaz/auction/AuctionEntity.java
  pl.edu.pjwstk.jaz.auction.AuctionEntity
+pl/edu/pjwstk/jaz/auction/AuctionService.java
+ pl.edu.pjwstk.jaz.auction.AuctionService
+pl/edu/pjwstk/jaz/endpoints/Explore.java
+ pl.edu.pjwstk.jaz.endpoints.Explore
+pl/edu/pjwstk/jaz/endpoints/Add.java
+ pl.edu.pjwstk.jaz.endpoints.Add
 pl/edu/pjwstk/jaz/photo/PhotoService.java
  pl.edu.pjwstk.jaz.photo.PhotoService
 pl/edu/pjwstk/jaz/endpoints/Edit.java
  pl.edu.pjwstk.jaz.endpoints.Edit
-pl/edu/pjwstk/jaz/auction/GetAuctionRequest.java
- pl.edu.pjwstk.jaz.auction.GetAuctionRequest
-pl/edu/pjwstk/jaz/endpoints/Add.java
- pl.edu.pjwstk.jaz.endpoints.Add
-pl/edu/pjwstk/jaz/endpoints/Explore.java
- pl.edu.pjwstk.jaz.endpoints.Explore
+pl/edu/pjwstk/jaz/auction/EditAuctionRequest.java
+ pl.edu.pjwstk.jaz.auction.EditAuctionRequest

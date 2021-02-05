@@ -1,6 +1,7 @@
 package pl.edu.pjwstk.jaz.auction;
 
 import liquibase.pro.packaged.A;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 import pl.edu.pjwstk.jaz.User;
 import pl.edu.pjwstk.jaz.category.CategoryEntity;
@@ -26,8 +27,9 @@ public class AuctionService {
     }
 
     public AuctionEntity saveAuction(String title, String description, Double price, UserEntity author,
-                            CategoryEntity category) {
+                            CategoryEntity category, Long version) {
         AuctionEntity auctionEntity = new AuctionEntity(title, description, price, category, author);
+        auctionEntity.setVersion(version);
         entityManager.persist(auctionEntity);
 
         return auctionEntity;
@@ -63,11 +65,11 @@ public class AuctionService {
         entityManager.merge(auctionEntity);
     }
 
-    public AuctionParameterEntity findAuctionParameterById(Long id) {
+    public List<AuctionParameterEntity> findAuctionParametersByAuctionId(Long id) {
         try {
             return entityManager.createQuery("SELECT p FROM AuctionParameterEntity p WHERE p.auction.id =: id", AuctionParameterEntity.class)
                     .setParameter("id", id)
-                    .getSingleResult();
+                    .getResultList();
         }
         catch (NoResultException e){
             return null;
@@ -88,5 +90,10 @@ public class AuctionService {
         ParameterEntity parameterEntity = auctionParameterEntity.getParameter();
         entityManager.merge(parameterEntity);
         entityManager.merge(auctionParameterEntity);
+    }
+    @Modifying
+    public void deleteAuctionParameters(Long id){
+        var parameters = findAuctionParametersByAuctionId(id);
+        parameters.forEach(entityManager::remove);
     }
 }

@@ -7,6 +7,7 @@ CREATE TABLE auction(
     id          INT     NOT NULL PRIMARY KEY,
     category_id INT     NOT NULL,
     creator_id  INT     NOT NULL,
+    version     INT     NOT NULL,
     title       VARCHAR NOT NULL,
     description VARCHAR NOT NULL,
     price       INT     NOT NULL,

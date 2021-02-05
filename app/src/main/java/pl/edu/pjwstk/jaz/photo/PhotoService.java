@@ -19,7 +19,8 @@ public class PhotoService {
     public PhotoService(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    public List<String> getPhotos(Long id){
+
+    public List<String> getPhotoLinks(Long id){
         try {
             return entityManager.createQuery("SELECT p.link FROM PhotoEntity p WHERE p.auction.id =:id", String.class)
                     .setParameter("id", id)
@@ -29,8 +30,24 @@ public class PhotoService {
         }
 
     }
+
+    public List<PhotoEntity> getPhotos(Long id){
+        try {
+            return entityManager.createQuery("SELECT p FROM PhotoEntity p WHERE p.auction.id =:id", PhotoEntity.class)
+                    .setParameter("id", id)
+                    .getResultList();
+        }catch(NoResultException e){
+            return null;
+        }
+    }
+
     public void savePhoto(String link, AuctionEntity auctionEntity){
         PhotoEntity photoEntity = new PhotoEntity(link,auctionEntity);
         entityManager.persist(photoEntity);
+    }
+
+    public void removePhotos(Long id){
+        var auctionPhotos = getPhotos(id);
+        auctionPhotos.forEach(entityManager::remove);
     }
 }

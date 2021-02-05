@@ -40,7 +40,7 @@ public class Explore {
         auctionList.forEach(auctionEntity -> {
             String photo;
             try{
-                photo = photoService.getPhotos(auctionEntity.getId()).get(0);
+                photo = photoService.getPhotoLinks(auctionEntity.getId()).get(0);
             }
             catch (IndexOutOfBoundsException e){
                 photo = null;
@@ -73,7 +73,7 @@ public class Explore {
         }
         String photo;
         try{
-            photo = photoService.getPhotos(auction.getId()).get(0);
+            photo = photoService.getPhotoLinks(auction.getId()).get(0);
         }
         catch (IndexOutOfBoundsException e){
             photo = null;
@@ -107,7 +107,7 @@ public class Explore {
 
     @GetMapping("/explore/photo/{id}")
     public ResponseEntity<List<String>> explorePhoto(@PathVariable Long id){
-        var photos = photoService.getPhotos(id);
+        var photos = photoService.getPhotoLinks(id);
         if(photos.isEmpty()){
             return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
         }

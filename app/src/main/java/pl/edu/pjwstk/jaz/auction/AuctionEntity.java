@@ -21,6 +21,8 @@ public class AuctionEntity {
     private String description;
     private Double price;
 
+    private Long version;
+
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private CategoryEntity category;
@@ -97,5 +99,13 @@ public class AuctionEntity {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
     }
 }
