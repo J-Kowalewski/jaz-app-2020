@@ -14,3 +14,5 @@ pl/edu/pjwstk/jaz/TestContextHolder.java
  pl.edu.pjwstk.jaz.TestContextHolder
 pl/edu/pjwstk/jaz/EndpointTest.java
  pl.edu.pjwstk.jaz.EndpointTest
+pl/edu/pjwstk/jaz/EditTest.java
+ pl.edu.pjwstk.jaz.EditTest
